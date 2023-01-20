@@ -46,3 +46,7 @@ test('trim text', () =>{
 test('trim text', () =>{
     expect(fullTrim("'1233' '000 text'")).toBe("'1233''000text'");
 })
+
+test('total', () =>{
+    expect(getTotal([{ price: 10, quantity: 10 }], 100)).toBe(0);
+})

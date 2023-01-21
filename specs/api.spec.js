@@ -57,9 +57,10 @@ test('Get status 200', async () => {
                 method: 'get',
                 url: 'https://dummyjson.com/auth/products/1',
                 headers: {
-               'Authorization' : 'Bearer ${resp.data.token}',
+               'Authorization' : (resp.data.token),
             },
         })
+           console.log(resp.data.token)
             expect(config_prod.status).toEqual(200);
            
      })
